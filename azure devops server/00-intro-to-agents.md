@@ -96,7 +96,7 @@ Is checklist validation done via a job ?
 
   
 
-![Agent connectivity for on-premises environments](/Users/dawn/Documents/projects/saxo-university/azure devops server/images/agent-line-of-sight.png)
+![Agent connectivity for on-premises environments](images/agent-line-of-sight.png)
 
 
 
