@@ -1,0 +1,9 @@
+﻿{
+  "acceptTeeEula": true,
+  "agentId": 9,
+  "agentName": "dawn",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://dev.azure.com/SaxoUniversity/",
+  "workFolder": "_work"
+}
