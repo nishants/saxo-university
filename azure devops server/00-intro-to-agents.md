@@ -5,10 +5,8 @@ Refer https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view
 - it is an installable software
 - that **runs one job at a time**
 - job can run on a **host machine** or in a **container**
-- by using containers, single machine can **host mulitple agents**
+- single machine can **host mulitple agents**, with or without using containers
 - Agents acan run on-premise or on  cloud 
-
-
 
 ### Jobs
 
@@ -112,9 +110,12 @@ Is checklist validation done via a job ?
 - For an agent using MS pipeline, a dependecy fails to install all of a sudden. What could be reason for such inconsistent behavior ?
   - <span style="color: rgba(0,0,0,0.1)">MS hosted agents are maintaned and auto updated by MS. The updated could have made agent incompatible to the job running on it </span>
 
+- Can a single machine run multiple agents without using containers?
+  - <span style="color: rgba(0,0,0,0.1)">Yes, even without containers </span>
 
 
-**Classwork** : 
+
+Classwork** : 
 
 - view all agents and their capabilities (https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops)
 - Create a self hosted agent?
