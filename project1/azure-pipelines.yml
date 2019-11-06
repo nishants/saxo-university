@@ -10,6 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: ls
+  displayName : 'list files in project root'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
