@@ -17,3 +17,9 @@ steps:
     yarn test
     yarn build
   displayName: 'run test and build'
+
+
+- script: |
+    pwd
+    ls
+  displayName: 'check if retains the dir from last script'
