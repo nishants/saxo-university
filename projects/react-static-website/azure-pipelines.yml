@@ -10,10 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: yarn install
-  displayName: 'Install npm packages'
 
 - script: |
+    cd projects/react-static-website
     yarn test
     yarn build
   displayName: 'run test and build'
