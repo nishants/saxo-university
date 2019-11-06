@@ -14,7 +14,7 @@ steps:
 - script: |
     cd projects/react-static-website
     yarn
-  displayName: 'isntall node modules'
+  displayName: 'isninstall node modules'
 
 # - script: |
 #     yarn test
@@ -22,9 +22,13 @@ steps:
 
 - script: |
     cd projects/react-static-website
-    yarn test
+    yarn lint
+  displayName: 'run lint'
+
+- script: |
+    cd projects/react-static-website
     yarn build
-  displayName: 'run test and build'
+  displayName: 'build artifacts'
 
 
 - script: |
