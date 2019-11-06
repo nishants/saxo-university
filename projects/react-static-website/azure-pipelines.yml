@@ -14,6 +14,14 @@ steps:
 - script: |
     cd projects/react-static-website
     yarn
+  displayName: 'isntall node modules'
+
+# - script: |
+#     yarn test
+#   displayName: 'run unit tests'
+
+- script: |
+    cd projects/react-static-website
     yarn test
     yarn build
   displayName: 'run test and build'
