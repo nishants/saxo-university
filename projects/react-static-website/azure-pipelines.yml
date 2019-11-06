@@ -13,6 +13,7 @@ steps:
 
 - script: |
     cd projects/react-static-website
+    yarn
     yarn test
     yarn build
   displayName: 'run test and build'
