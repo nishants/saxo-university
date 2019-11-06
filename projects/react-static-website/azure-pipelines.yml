@@ -14,7 +14,7 @@ steps:
 - script: |
     cd projects/react-static-website
     yarn
-  displayName: 'isninstall node modules'
+  displayName: 'install node modules'
 
 # - script: |
 #     yarn test
