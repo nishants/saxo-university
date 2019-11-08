@@ -1,0 +1,19 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: | 
+    cd projects/react-static-website
+    yarn 
+  displayName: 'Installing node modules'
+
+- script: |
+    yarn lint
+  displayName: 'Checking for lint errors'
+
+- script: |
+    yarn build
+  displayName: 'Running webpack build'
