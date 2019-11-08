@@ -16,10 +16,6 @@ steps:
     yarn
   displayName: 'install node modules'
 
-# - script: |
-#     yarn test
-#   displayName: 'run unit tests'
-
 - script: |
     cd projects/react-static-website
     yarn lint
@@ -29,7 +25,6 @@ steps:
     cd projects/react-static-website
     yarn build
   displayName: 'build artifacts'
-
 
 - script: |
     pwd
