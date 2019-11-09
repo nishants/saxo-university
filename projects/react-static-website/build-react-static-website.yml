@@ -1,9 +1,12 @@
+// this sets trigger to any update in master
 trigger:
 - master
 
+// defines the host for agent (MS hosted)
 pool:
   vmImage: 'ubuntu-latest'
 
+// build steps for the pipeline
 steps:
 - script: yarn 
   workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
@@ -17,3 +20,5 @@ steps:
     yarn build
   workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
   displayName: 'Running webpack build'
+
+
