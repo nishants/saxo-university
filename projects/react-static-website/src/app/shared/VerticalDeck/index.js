@@ -8,9 +8,7 @@ const creatGridItem = e => ({
     e.style.width = `${value}px`;
   },
   reset: () => {
-    e.style.transform = `translateX(-${e.offsetLeft}px) translateY(-${
-      e.offsetTop
-    }px)`;
+    e.style.transform = `translateX(-${e.offsetLeft}px) translateY(-${e.offsetTop}px)`;
   },
   showItem: (top, left, width) => {
     e.style.transform = `translateX(${left}px) translateY(${top}px)`;
@@ -127,6 +125,7 @@ const computeLayout = ({
 class VerticalDeck extends React.PureComponent {
   gridId = Math.random().toString();
 
+  // eslint-disable-next-line react/state-in-constructor
   state = { gridItems: [], ready: false };
 
   listener = null;
@@ -167,9 +166,7 @@ class VerticalDeck extends React.PureComponent {
       layout: this.props.layout
     });
 
-    this.gridElement.current.style.height = `${
-      computedLayout.containerHeight
-    }px`;
+    this.gridElement.current.style.height = `${computedLayout.containerHeight}px`;
 
     computedLayout.positions.forEach(p => {
       p.item.showItem(p.top, p.left, computedLayout.rowWidth);

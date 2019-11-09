@@ -6,14 +6,11 @@ import { scrollToTop } from '../../../shared/util';
 import VerticalDeck from '../../../shared/VerticalDeck';
 
 class SearchTab extends React.PureComponent {
+  // eslint-disable-next-line react/state-in-constructor
   state = { cards: [], lastSearchString: null };
 
   static getDerivedStateFromProps(
-    {
-      data,
-      shouldShowCard,
-      searchAndFilter: { searchString }
-    },
+    { data, shouldShowCard, searchAndFilter: { searchString } },
     { lastSearchString }
   ) {
     return lastSearchString === searchString

@@ -17,6 +17,7 @@ import { searchForKey } from './actions';
 import { scrolledReached, getScrollPosition } from '../../shared/util';
 
 class HomePage extends React.Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     splashScrollState: '',
     profileReached: false,
