@@ -22,3 +22,8 @@ jobs:
         yarn build
       workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
       displayName: 'Running webpack build'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        path: $(Agent.BuildDirectory)/s/projects/react-static-website/build
+        artifact: react-static-website-build-artifacts
