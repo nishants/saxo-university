@@ -1,6 +1,6 @@
 # This sets trigger to any update in master  
-trigger:
-- master
+# trigger:
+# - master
 
 #  Defines the host for agent (MS hosted)
 pool:
