@@ -7,16 +7,18 @@ pool:
   vmImage: 'ubuntu-latest'
 
 #  Build steps for the pipeline
-steps:
-- script: yarn 
-  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
-  displayName: 'Installing node modules'
+jobs: 
+  - job: buildAssets
+    steps:
+    - script: yarn 
+      workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
+      displayName: 'Installing node modules'
 
-- script: yarn lint
-  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
-  displayName: 'Checking for lint errors'
+    - script: yarn lint
+      workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
+      displayName: 'Checking for lint errors'
 
-- script: |
-    yarn build
-  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
-  displayName: 'Running webpack build'
+    - script: |
+        yarn build
+      workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
+      displayName: 'Running webpack build'
