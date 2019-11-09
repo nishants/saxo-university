@@ -21,14 +21,14 @@ steps:
   displayName: 'check items in $(Agent.BuildDirectory)/projects/react-static-website'
 
 - script: yarn 
-  workingDirectory: $(Agent.BuildDirectory)/projects/react-static-website
+  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
   displayName: 'Installing node modules'
 
 - script: yarn lint
-  workingDirectory: $(Agent.BuildDirectory)/projects/react-static-website
+  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
   displayName: 'Checking for lint errors'
 
 - script: |
     yarn build
-  workingDirectory: $(Agent.BuildDirectory)/projects/react-static-website
+  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
   displayName: 'Running webpack build'
