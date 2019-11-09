@@ -13,9 +13,11 @@ steps:
   displayName: 'Installing node modules'
 
 - script: |
+    cd projects/react-static-website
     yarn lint
   displayName: 'Checking for lint errors'
 
 - script: |
+    cd projects/react-static-website
     yarn build
   displayName: 'Running webpack build'
