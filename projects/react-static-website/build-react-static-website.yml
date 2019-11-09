@@ -7,17 +7,15 @@ pool:
 steps:
 - script : sudo apt-get install build-essential
 
-- script: | 
-    cd projects/react-static-website
-    yarn 
+- script : cd projects/react-static-website
+  displayName: 'change workdirectory to project'
+
+- script: yarn 
   displayName: 'Installing node modules'
 
-- script: |
-    cd projects/react-static-website
-    yarn lint
+- script: yarn lint
   displayName: 'Checking for lint errors'
 
 - script: |
-    cd projects/react-static-website
     yarn build
   displayName: 'Running webpack build'
