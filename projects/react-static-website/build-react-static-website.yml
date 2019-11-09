@@ -17,7 +17,7 @@ steps:
   displayName: 'items in  default directory'
 
 - script: ls 
-  workingDirectory: $(Agent.BuildDirectory)/projects/react-static-website
+  workingDirectory: $(Agent.BuildDirectory)/s/projects/react-static-website
   displayName: 'check items in $(Agent.BuildDirectory)/projects/react-static-website'
 
 - script: yarn 
