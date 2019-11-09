@@ -5,6 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script : sudo apt-get install build-essential
+
 - script: | 
     cd projects/react-static-website
     yarn 
