@@ -10,6 +10,16 @@ steps:
 # - script : cd projects/react-static-website
 #   displayName: 'change workdirectory to project'
 
+- script: pwd 
+  displayName: 'path of default directory'
+
+- script: ls 
+  displayName: 'items in  default directory'
+
+- script: ls 
+  workingDirectory: $(Agent.BuildDirectory)/projects/react-static-website
+  displayName: 'check items in $(Agent.BuildDirectory)/projects/react-static-website'
+
 - script: yarn 
   workingDirectory: $(Agent.BuildDirectory)/projects/react-static-website
   displayName: 'Installing node modules'
