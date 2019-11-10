@@ -41,6 +41,79 @@ Cheat sheet
 
 
 
+**Artifacts**
+
+- These are the outputs of a build job.
+- These can be used to shared files between
+  - stages, or
+  - pipelines
+- These remain available after the build is completed
+
+
+
+**Triggers**
+
+- by default the YAML build runs for all branches (unless specified otherwise)
+
+- create and push new branch a new branch `test-build-branch`, make a commit, the build will not run
+
+- run build on creating new branch
+
+- **Branch triggers**
+
+  - batches (run changes in batch)
+  - branches wildcard (run for release/*)
+  - skip pipeline build for a commit (`***NO_CI***`or `[skip ci]` in commit message)
+
+- **Pull Request tirggers**
+
+  - by default every pull request triggers a build
+
+  - YAML PR triggers only work for `github` and `bitbucket`
+
+  - For **`Azure` git repos, we need to configure the `branch policy`**
+
+  - Following config will make only PR against master and release branches to trigger a build
+
+    ```yaml
+    pr:
+    - master
+    - releases/*
+    ```
+
+
+
+**Artifacts**
+
+- **Pipeline Artifacts** allow output of a build (files) to be consumed by other build/release tasks
+
+- These are typically consumed by 
+
+  - tests ( to validate artifacts)
+  - release (to deploy bundled/compiled code/packages to servers)
+
+- Example to publish artifacts :
+
+  ```yaml
+    - task: PublishPipelineArtifact@1
+        inputs:
+          path: $(Agent.BuildDirectory)/s/projects/react-static-website/build
+          artifact: react-static-website-build-artifacts
+  ```
+
+- Example to download artifacts from a build
+
+  ```yaml
+  steps:
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      artifact: react-static-website-build-artifacts
+  ```
+
+  
+
+
+
 ### Jobs
 
 - Could involve **compiling, running unit tests, quality checks, deploying to a remote server etc.**

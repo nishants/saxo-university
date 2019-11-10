@@ -1,0 +1,61 @@
+{
+  "id": "/subscriptions/4f955537-4a7d-40db-b2f1-97400c3d177a/resourceGroups/static-website-azure/providers/Microsoft.Resources/deployments/Microsoft.StorageAccount-20191109184915",
+  "name": "Microsoft.StorageAccount-20191109184915",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "marketplaceItemId": "Microsoft.StorageAccount",
+    "primaryResourceId": "/subscriptions/4f955537-4a7d-40db-b2f1-97400c3d177a/resourcegroups/static-website-azure/providers/Microsoft.Storage/storageAccounts/staticwebsiteazure"
+  },
+  "properties": {
+    "templateHash": "11961669741847493773",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "westindia"
+      },
+      "storageAccountName": {
+        "type": "String",
+        "value": "staticwebsiteazure"
+      },
+      "accountType": {
+        "type": "String",
+        "value": "Standard_RAGRS"
+      },
+      "kind": {
+        "type": "String",
+        "value": "StorageV2"
+      },
+      "accessTier": {
+        "type": "String",
+        "value": "Hot"
+      },
+      "supportsHttpsTrafficOnly": {
+        "type": "Bool",
+        "value": true
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Accepted",
+    "timestamp": "2019-11-09T13:22:47.2554596Z",
+    "duration": "PT0.023015S",
+    "correlationId": "65d01db1-28df-4756-a4de-fe2679457a83",
+    "providers": [
+      {
+        "namespace": "Microsoft.Storage",
+        "resourceTypes": [
+          {
+            "resourceType": "storageAccounts",
+            "locations": [
+              "westindia"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [],
+    "validationLevel": "Template"
+  }
+}
