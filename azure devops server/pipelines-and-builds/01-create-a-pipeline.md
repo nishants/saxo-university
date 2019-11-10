@@ -81,7 +81,34 @@ Define work directory for all steps : https://github.com/MicrosoftDocs/vsts-docs
 
 
 
-12. Click on save and run, choose to commit changes in master branch.
+12. Click on save and run, choose to commit changes in master branch
+
+
+
+**Publishing artifacts**
+
+- To be able to deploy the bundled resources (e.g. to Azure Storage), we will need to retain and share the results (files) of this build with release build 
+
+- Lets instruct the azure to save the result of our build aka **Pipeline Artifacts**
+
+  ```yaml
+    - task: PublishPipelineArtifact@1
+        inputs:
+          path: $(Agent.BuildDirectory)/s/projects/react-static-website/build
+          artifact: react-static-website-build-artifacts
+  ```
+
+- Now after the build is run, open the build result, we will see an option to view/download artifacts : 
+
+  ![image-20191110115958567](/Users/dawn/Documents/projects/saxo-university/azure devops server/pipelines-and-builds/images/download-artifacts.png)
+
+
+
+- If the build fails chech if there resource access requires authorization, click on **Authorize Resource ** and build again
+
+![image-20191110121232065](/Users/dawn/Documents/projects/saxo-university/azure devops server/pipelines-and-builds/images/authorize-services-connection-for-resources.png)
+
+
 
 
 
