@@ -28,6 +28,13 @@ jobs:
         path: $(Agent.BuildDirectory)/s/projects/react-static-website/build
         artifact: react-static-website-build-artifacts
 
+    # - task: AzureFileCopy@3
+    #   inputs:
+    #     SourcePath: '$(Agent.BuildDirectory)/s/projects/react-static-website/build'
+    #     azureSubscription: 'Free Trial (4f955537-4a7d-40db-b2f1-97400c3d177a)'
+    #     Destination: 'AzureBlob'
+    #     storage: 'staticwebsiteazure'
+    #     ContainerName: '$web'
     - task: AzureFileCopy@3
       inputs:
         SourcePath: '$(Agent.BuildDirectory)/s/projects/react-static-website/build'
@@ -35,3 +42,4 @@ jobs:
         Destination: 'AzureBlob'
         storage: 'staticwebsiteazure'
         ContainerName: '$web'
+        outputStorageUri: 'https://staticwebsiteazure.z10.web.core.windows.net/'
