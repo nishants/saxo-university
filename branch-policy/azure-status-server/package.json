@@ -1,0 +1,17 @@
+{
+  "name": "azure-status-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "debug": "PORT=3003 DEBUG=azure-status-server:* npm start",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  }
+}
