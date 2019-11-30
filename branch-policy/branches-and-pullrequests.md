@@ -2,7 +2,7 @@ refer : https://docs.microsoft.com/en-us/azure/devops/repos/git/pull-requests-ov
 
 
 
-**Fot code hosted in Microsoft Azure Only**
+**For code hosted in Microsoft Azure Only**
 
 - Protected branch
   - any push to such a branch will be rejected
@@ -18,6 +18,7 @@ refer : https://docs.microsoft.com/en-us/azure/devops/repos/git/pull-requests-ov
   - listen to pull request
   - set status
   - have multiple checks
+  - do not allow merge till all checks are finished
 
 
 
@@ -28,4 +29,5 @@ refer : https://docs.microsoft.com/en-us/azure/devops/repos/git/pull-requests-ov
 ### Creating pull request status server
 
 - for custom pull request workflow
-- 
+- create a web server with following routes
+  - 
