@@ -1,6 +1,7 @@
-# This sets trigger to any update in master  
-# trigger:
-# - master
+# This sets trigger to any update in master
+# if no branch is mentioned, build runs for all commits in all branches
+trigger:
+- master
 
 #  Defines the host for agent (MS hosted)
 pool:

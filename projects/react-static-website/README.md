@@ -5,7 +5,8 @@ Release Backlog:
 - create footer
 - unsupported browser message
 - sidebar in about-me for mobile
-
+ 
+ 
 Done :
 - clear search in place of search icon
 - search tag style
